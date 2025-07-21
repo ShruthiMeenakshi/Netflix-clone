@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoviesHere - Watch TV Shows Online, Watch Movies Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'movieshere-red': '#E50914',
+                        'movieshere-dark': '#141414',
+                        'movieshere-gray': '#303030',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(to top, rgba(20, 20, 20, 1) 0%, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-movieshere-dark text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gradient-to-b from-black to-transparent px-4 md:px-12 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <a href="#" class="text-3xl font-bold text-movieshere-red">MOVIES<span class="text-white">HERE</span></a>
+            <div class="hidden md:flex ml-8 space-x-6">
+                <a href="home.html" class="hover:text-gray-300">Home</a>
+                <a href="Tvshows.html" class="hover:text-gray-300">TV Shows</a>
+                <a href="movies.html" class="hover:text-gray-300">Movies</a>
+                <a href="News.html" class="hover:text-gray-300">New & Popular</a>
+                <a href="list.html" class="hover:text-gray-300">My List</a>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <div class="hidden md:block">
+                <i class="fas fa-search hover:text-gray-300 cursor-pointer"></i>
+            </div>
+            <div class="hidden md:block">
+                <i class="fas fa-bell hover:text-gray-300 cursor-pointer"></i>
+            </div>
+            <div class="flex items-center space-x-2 cursor-pointer">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" class="w-8 h-8 rounded">
+                <i class="fas fa-caret-down hover:text-gray-300"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen">
+        <div class="absolute inset-0 hero-gradient z-10"></div>
+        <img src="https://image.tmdb.org/t/p/original/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg" alt="Featured Movie" class="w-full h-full object-cover">
+        
+        <div class="absolute bottom-1/4 left-0 right-0 z-20 px-4 md:px-12">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Stranger Things</h1>
+            <p class="text-lg md:text-xl max-w-2xl mb-6">When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.</p>
+            <div class="flex space-x-4">
+                <button class="bg-white text-black px-6 py-2 rounded flex items-center hover:bg-opacity-80">
+                    <i class="fas fa-play mr-2"></i> Play
+                </button>
+                <button class="bg-movieshere-gray bg-opacity-70 px-6 py-2 rounded flex items-center hover:bg-opacity-50">
+                    <i class="fas fa-info-circle mr-2"></i> More Info
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Rows -->
+    <section class="px-4 md:px-12 py-8">
+        <!-- Row 1 -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Popular on MoviesHere</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/1X7vow16X7CnCoexXh4H4F2yDJv.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Trending Now</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/1X7vow16X7CnCoexXh4H4F2yDJv.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Continue Watching</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-600">
+                        <div class="h-full bg-movieshere-red" style="width: 65%"></div>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/1X7vow16X7CnCoexXh4H4F2yDJv.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-600">
+                        <div class="h-full bg-movieshere-red" style="width: 30%"></div>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-600">
+                        <div class="h-full bg-movieshere-red" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-600">
+                        <div class="h-full bg-movieshere-red" style="width: 45%"></div>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-600">
+                        <div class="h-full bg-movieshere-red" style="width: 15%"></div>
+                    </div>
+                </div>
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Movie" class="w-full h-auto transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                        <button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-movieshere-red text-white px-4 py-2 rounded">
+                            <i class="fas fa-play mr-2"></i> Play
+                        </button>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-600">
+                        <div class="h-full bg-movieshere-red" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 px-4 md:px-12 py-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex mb-6">
+                <a href="#" class="mr-4"><i class="fab fa-facebook text-2xl hover:text-white"></i></a>
+                <a href="#" class="mr-4"><i class="fab fa-instagram text-2xl hover:text-white"></i></a>
+                <a href="#" class="mr-4"><i class="fab fa-twitter text-2xl hover:text-white"></i></a>
+                <a href="#" class="mr-4"><i class="fab fa-youtube text-2xl hover:text-white"></i></a>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white">Audio Description</a></li>
+                        <li><a href="#" class="hover:text-white">Investor Relations</a></li>
+                        <li><a href="#" class="hover:text-white">Legal Notices</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">Jobs</a></li>
+                        <li><a href="#" class="hover:text-white">Cookie Preferences</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white">Gift Cards</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-white">Corporate Information</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white">Media Center</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="border border-gray-400 px-4 py-2 mb-6 hover:text-white">
+                Service Code
+            </button>
+            <p class="text-sm">© 2023 MoviesHere, Inc.</p>
+        </div>
+    </footer>
+</body>
+</html>
